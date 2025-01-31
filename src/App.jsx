@@ -15,7 +15,7 @@ function App() {
         <Route path="/meg" element={<Meg />} /> {/* Meg Route */}
         <Route path="/opt" element={<Opt />} /> {/* Meg Route */}
       </Routes>
-    </Router>
+    </Router>  
   );
 }
 
