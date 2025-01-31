@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 const CatID = () => {
   const cat = {
     name: 'Doffy II',
+    gender:'Female',
     birthDate: new Date('2024-12-17'), // Example birth date
     race: 'Tuxedo Cat',
     color: 'Black and White',
@@ -124,7 +125,7 @@ const CatID = () => {
               onClick={() => setIsImagePopupOpen(false)}
             >X</span>
             <img
-              src='/meg.jpg'
+              src='/Doffy.jpg'
               alt="Cat"
               style={{ width: "80vw", maxHeight: "80vh", objectFit: "contain", borderRadius: "10px" }}
             />
@@ -137,6 +138,7 @@ const CatID = () => {
       </h2>
       <div style={{ fontSize: "14px", color: "#555", textAlign: "center" }}>
         <p><strong>Age:</strong> {age.years} years, {age.months} months, {age.weeks} weeks</p>
+        <p><strong>Gender: </strong>{cat.gender}</p>
         <p><strong>Description:</strong> <strong>{cat.race}, {cat.color}, {cat.eyeColor}</strong>, {cat.description}</p>
         <p><strong>Location:</strong> {cat.location}</p>
         <div style={{ marginTop: "20px", width: "100%", display: "flex", justifyContent: "space-between" }}>
