@@ -1,8 +1,7 @@
-# React + Vite
+Cats ID Online
+Welcome to Cats ID Online! This project is a minimal React setup using Vite with Hot Module Replacement (HMR) and integrated ESLint for code linting. It's a fast and efficient web application that provides a simple and smooth user experience.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
+Fast Refresh powered by either Babel or SWC, depending on your plugin choice.
+ESLint integration to ensure code quality.
+Developed using React and Vite for high-performance development.
