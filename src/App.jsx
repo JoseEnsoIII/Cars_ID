@@ -9,7 +9,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <Analytics /> 
+      <Analytics /> {/* Add the Analytics component here to track page views */}
       <Routes>
         <Route path="/" element={<Home />} /> {/* Home Route */}
         <Route path="/parent" element={<Purrent />} /> {/* Parent Route */}
