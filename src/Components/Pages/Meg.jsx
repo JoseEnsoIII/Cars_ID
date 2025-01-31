@@ -8,7 +8,7 @@ const CatID = () => {
     race: 'Tuxedo Cat',
     color: 'Black and White',
     eyeColor: 'Green',
-    description: 'A playful and friendly orange tabby with distinctive white paws. Loves chasing laser pointers.',
+    description: 'She’s playful with her little sister and enjoys spending time with her. When she’s alone with her owner, she loves to curl up and sleep peacefully after a good meal.',
     location: 'Lingunan, Valenzuela City',
   };
 
