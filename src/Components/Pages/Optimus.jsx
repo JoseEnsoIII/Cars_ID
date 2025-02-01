@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const CatID = () => {
   const cat = {
-    name: 'Doffy II',
+    name: 'Panda',
     gender:'Female',
     birthDate: new Date('2024-12-17'), // Example birth date
     race: 'Tuxedo Cat',

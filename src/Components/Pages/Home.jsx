@@ -62,7 +62,7 @@ const Welcome = () => {
         <h1 style={titleStyle}>Enso Family Cat Tree</h1>
         <div style={buttonsContainerStyle}>
           <a href="/Meg" style={{ ...buttonStyle, ':hover': buttonHoverStyle, ':active': buttonActiveStyle }}>Meg</a>
-          <a href="/Opt" style={{ ...buttonStyle, ':hover': buttonHoverStyle, ':active': buttonActiveStyle }}>Optimus</a>
+          <a href="/Opt" style={{ ...buttonStyle, ':hover': buttonHoverStyle, ':active': buttonActiveStyle }}>Panda</a>
         </div>
       </header>
     </div>
