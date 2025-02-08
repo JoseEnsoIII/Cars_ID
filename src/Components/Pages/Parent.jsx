@@ -1,20 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const CatID = () => {
   const cat = {
-    id: "12345ABC", // Adding unique ID
+    id: "12345ABC",
     name: "Jose Enso III",
     number: "09766686559",
     number2: "09675207614",
     gmail: "joseensothethird@gmail.com",
-    race: "Tabby", // Added race
-    color: "Orange and White", // Added color
-    eyeColor: "Green", // Added eye color
+    race: "Tabby",
+    color: "Orange and White",
+    eyeColor: "Green",
     description:
       "A playful and friendly orange tabby with distinctive white paws. Loves chasing laser pointers.",
     location: "Lingunan, Valenzuela City",
-    qrLink: "https://example.com/cat-profile", // Example link for QR code
+    qrLink: "https://example.com/cat-profile",
   };
+
+  // Update the tab title with the parent's name
+  useEffect(() => {
+    document.title = `${cat.name}'s ID`;
+    return () => {
+      document.title = "Default Title";
+    };
+  }, [cat.name]);
 
   return (
     <div
@@ -88,16 +96,24 @@ const CatID = () => {
         <p>
           <strong>Gmail:</strong> {cat.gmail}
         </p>
-        <a href="https://www.openstreetmap.org/way/30160365" target="_blank" rel="noopener noreferrer">
-          <button style={{
-            backgroundColor: "#28a745",
-            color: "white",
-            padding: "10px 20px",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-            transition: "background-color 0.3s ease",
-          }} onMouseOver={(e) => e.target.style.backgroundColor = "#218838"} onMouseOut={(e) => e.target.style.backgroundColor = "#28a745"}>
+        <a
+          href="https://www.openstreetmap.org/way/30160365"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button
+            style={{
+              backgroundColor: "#28a745",
+              color: "white",
+              padding: "10px 20px",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer",
+              transition: "background-color 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.backgroundColor = "#218838")}
+            onMouseOut={(e) => (e.target.style.backgroundColor = "#28a745")}
+          >
             My Home's Location
           </button>
         </a>
@@ -111,7 +127,6 @@ const CatID = () => {
           justifyContent: "space-between",
         }}
       >
-       
         <a
           href="/"
           style={{

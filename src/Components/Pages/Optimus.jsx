@@ -56,7 +56,13 @@ const CatID = () => {
 
     return () => clearInterval(interval);
   }, []);
-
+  useEffect(() => {
+    document.title = `${cat.name}'s ID`; // Dynamically set tab name based on cat's name
+    return () => {
+      document.title = 'Default Title'; // Reset when component unmounts (optional)
+    };
+  }, [cat.name]); // Dependency array ensures it updates if cat name changes
+  
   return (
     <div style={{
       height: "100%",
