@@ -98,7 +98,7 @@ const CatID = () => {
             objectFit: "cover",
             cursor: "pointer"
           }}
-          src='/Doffy.jpg'
+          src='/Panda.jpg'
           alt="Cat"
           onClick={() => setIsImagePopupOpen(true)}
         />
@@ -131,7 +131,7 @@ const CatID = () => {
               onClick={() => setIsImagePopupOpen(false)}
             >X</span>
             <img
-              src='/Doffy.jpg'
+              src='/Panda.jpg'
               alt="Cat"
               style={{ width: "80vw", maxHeight: "80vh", objectFit: "contain", borderRadius: "10px" }}
             />
@@ -162,7 +162,7 @@ const CatID = () => {
           </button>
         </a>
 
-        <a href="https://drive.google.com/drive/folders/1CUKirtUN2c70lcuDFsfcIo1DZCueCs3O?view" target="_blank" rel="noopener noreferrer">
+        <a href="https://drive.google.com/drive/folders/1vvUuOCnwujh6tuprywJMAd9mUXpbZ2YT?view" target="_blank" rel="noopener noreferrer">
           <button style={{
             backgroundColor: "#007bff",
             color: "white",

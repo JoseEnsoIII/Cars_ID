@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 
 const CatID = () => {
   const cat = {
-    name: 'Charlie',
-    gender:'Female',
-    birthDate: new Date('2024-10-27'), // Example birth date
-    race: 'Tuxedo Cat',
-    color: 'Black and White',
+    name: 'Doffy',
+    fullname: 'Doflamingo Donquixote',
+    gender:'Male',
+    birthday:'Nov 2023',
+    birthDate: new Date('2023-11-27'), // Example birth date
+    race: 'Orange Cat',
+    color: 'Orange and White',
     eyeColor: 'Green',
     description: 'She’s playful with her little sister and enjoys spending time with her. When she’s alone with her owner, she loves to curl up and sleep peacefully after a good meal.',
     location: 'Lingunan, Valenzuela City',
@@ -99,7 +101,7 @@ const CatID = () => {
             objectFit: "cover",
             cursor: "pointer"
           }}
-          src='/Charlie.jpg'
+          src='/Doffy.jpg'
           alt="Cat"
           onClick={() => setIsImagePopupOpen(true)}
         />
@@ -132,7 +134,7 @@ const CatID = () => {
               onClick={() => setIsImagePopupOpen(false)}
             >X</span>
             <img
-              src='/Charlie.jpg'
+              src='/Doffy.jpg'
               alt="Cat"
               style={{ width: "80vw", maxHeight: "80vh", objectFit: "contain", borderRadius: "10px" }}
             />
@@ -140,10 +142,13 @@ const CatID = () => {
         </div>
       )}
 
-      <h2 style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center", color: "#333", marginBottom: "10px" }}>
-        {cat.name}'s ID
+    
+      <div style={{ fontSize: "14px", color: "#555", textAlign: "center" }}> 
+         <h2 style={{ fontSize: "24px", fontWeight: "bold", textAlign: "center", color: "#333", marginBottom: "10px" }}>
+        {cat.name}'s ID <br/>
+        {cat.fullname}
       </h2>
-      <div style={{ fontSize: "14px", color: "#555", textAlign: "center" }}>
+        <p><strong>Birthday: </strong>{cat.birthday}</p>
         <p><strong>Age:</strong> {age.years} years, {age.months} months, {age.weeks} weeks</p>
         <p><strong>Gender: </strong>{cat.gender}</p>
         <p><strong>Description:</strong> <strong>{cat.race}, {cat.color}, {cat.eyeColor}</strong>, {cat.description}</p>

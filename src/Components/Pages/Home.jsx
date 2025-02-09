@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Welcome = () => {
   const containerStyle = {
@@ -34,6 +34,8 @@ const Welcome = () => {
   };
 
   const buttonStyle = {
+    width:'200px',
+    height:"50px",
     textDecoration: "none",
     display: "inline-block",
     padding: "12px 20px",
@@ -60,9 +62,67 @@ const Welcome = () => {
     <div style={containerStyle}>
       <header style={headerStyle}>
         <h1 style={titleStyle}>Enso Family Cat Tree</h1>
+
         <div style={buttonsContainerStyle}>
-          <a href="/charlie" style={{ ...buttonStyle, ':hover': buttonHoverStyle, ':active': buttonActiveStyle }}>Charlie</a>
-          <a href="/panda" style={{ ...buttonStyle, ':hover': buttonHoverStyle, ':active': buttonActiveStyle }}>Panda</a>
+        <a
+  href="/doffy"
+  style={{
+    ...buttonStyle,
+    backgroundImage: "url('/Doffy.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    width: "200px", // Adjust as needed
+    height: "100px", // Adjust as needed
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "white", // Ensures text is visible
+    textDecoration: "none",
+    fontWeight: "bold",
+  }}
+>
+  Doffy
+</a>
+
+
+<a
+  href="/charlie"
+  style={{
+    ...buttonStyle,
+    backgroundImage: "url('/Charlie.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    width: "200px", // Adjust as needed
+    height: "100px", // Adjust as needed
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "black", // Ensures text is visible
+    textDecoration: "none",
+    fontWeight: "bold",
+  }}
+>
+  Charlie
+</a>
+<a
+  href="/charlie"
+  style={{
+    ...buttonStyle,
+    backgroundImage: "url('/Panda.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    width: "200px", // Adjust as needed
+    height: "100px", // Adjust as needed
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "black", // Ensures text is visible
+    textDecoration: "none",
+    fontWeight: "bold",
+  }}
+>
+  Panda
+</a>
         </div>
       </header>
     </div>
