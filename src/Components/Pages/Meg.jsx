@@ -145,8 +145,8 @@ const CatID = () => {
       </h2>
       <div style={{ fontSize: "14px", color: "#555", textAlign: "center" }}>
         <p><strong>Age:</strong> {age.years} years, {age.months} months, {age.weeks} weeks</p>
-        <p><strong>Gender: </strong>{cat.gender}</p>
-        <p><strong>Description:</strong> <strong>{cat.race}, {cat.color}, {cat.eyeColor}</strong>, {cat.description}</p>
+        <p><strong><a href='/family_tree'>Family Tree</a> </strong></p>
+        <p><strong>Description:</strong> <strong>{cat.gender} {cat.race}, {cat.color}, {cat.eyeColor}</strong>, {cat.description}</p>
         <p><strong>Location:</strong> {cat.location}</p>
         <div style={{ marginTop: "20px", width: "100%", display: "flex", justifyContent: "space-between" }}>
         <a href="https://www.openstreetmap.org/way/30160365" target="_blank" rel="noopener noreferrer">

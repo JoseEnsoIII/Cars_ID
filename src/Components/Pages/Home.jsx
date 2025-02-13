@@ -77,43 +77,7 @@ const Welcome = () => {
           ))}
         </div>
 
-        {/* Family Tree */}
-        <div style={{ marginTop: "30px", textAlign: "center", width: "100%" }}>
-          {/* Parents */}
-          <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginBottom: "15px" }}>
-            {familyData.parents.map((parent, index) => (
-              <div
-                key={index}
-                style={{
-                  fontWeight: "bold",
-                  backgroundColor: parent.bgColor,
-                  padding: "10px",
-                  borderRadius: "6px",
-                  flex: 1,
-                  maxWidth: "180px",
-                }}
-              >
-                {parent.name}
-              </div>
-            ))}
-          </div>
-
-          {/* Siblings */}
-          <div style={buttonsContainerStyle}>
-            {familyData.siblings.map((sibling, index) => (
-              <a
-                key={index}
-                href={sibling.link}
-                style={{
-                  ...buttonStyle,
-                  backgroundImage: `url('${sibling.image}')`,
-                }}
-              >
-                {sibling.name}
-              </a>
-            ))}
-          </div>
-        </div>
+        
       </header>
     </div>
   );

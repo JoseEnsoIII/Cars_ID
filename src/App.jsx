@@ -5,6 +5,7 @@ import Charlie from './Components/Pages/Meg'; // Import Meg page
 import Panda from './Components/Pages/Optimus'; // Import Optimus page
 import Doffy from './Components/Pages/Doffy'; // Import Optimus page
 import Megs from './Components/Pages/Megs'; // Import Optimus page
+import FamilyTree from './Components/Pages/Family_Tree'; // Import Optimus page
 import Purrent from './Components/Pages/Parent'; // Import Parent page
 import './App.css';
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/charlie" element={<Charlie />} />
         <Route path="/panda" element={<Panda />} />
         <Route path="/doffy" element={<Doffy />} />
+        <Route path="/family_tree" element={<FamilyTree />} />
         <Route path="/megs" element={<Megs />} />
       </Routes>
     </Router>  

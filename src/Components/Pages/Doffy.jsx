@@ -149,6 +149,7 @@ const CatID = () => {
         {cat.fullname}
       </h2>
         <p><strong>Birthday: </strong>{cat.birthday}</p>
+        <p><strong><a href='/family_tree'>Family Tree</a> </strong></p>
         <p><strong>Age:</strong> {age.years} years, {age.months} months, {age.weeks} weeks</p>
         <p><strong>Gender: </strong>{cat.gender}</p>
         <p><strong>Description:</strong> <strong>{cat.race}, {cat.color}, {cat.eyeColor}</strong>, {cat.description}</p>
