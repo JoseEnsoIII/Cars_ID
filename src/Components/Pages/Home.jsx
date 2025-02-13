@@ -1,8 +1,9 @@
 import React from "react";
+import familyData from "../Family/Family_Data"; // Import the data
 
 const Welcome = () => {
   const containerStyle = {
-    height: "100%",
+    minHeight: "100vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -16,113 +17,102 @@ const Welcome = () => {
     borderRadius: "12px",
     padding: "40px",
     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-    width: "100%",
+    width: "90%",
     maxWidth: "600px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   };
 
   const titleStyle = {
-    fontSize: "2.5rem",
+    fontSize: "2rem",
     fontWeight: "bold",
     color: "#4A90E2",
-    marginBottom: "30px",
+    marginBottom: "20px",
   };
 
   const buttonsContainerStyle = {
     display: "flex",
     justifyContent: "center",
-    gap: "20px",
+    flexWrap: "wrap",
+    gap: "15px",
+    width: "100%",
   };
 
   const buttonStyle = {
-    width:'200px',
-    height:"50px",
+    width: "150px",
+    height: "80px",
     textDecoration: "none",
-    display: "inline-block",
-    padding: "12px 20px",
-    fontSize: "1.1rem",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "1rem",
     fontWeight: "600",
-    color: "#fff",
-    backgroundColor: "#4CAF50",
     borderRadius: "8px",
     textAlign: "center",
     transition: "background-color 0.3s ease, transform 0.2s ease",
-  };
-
-  const buttonHoverStyle = {
-    backgroundColor: "#45a049",
-    transform: "translateY(-3px)",
-  };
-
-  const buttonActiveStyle = {
-    backgroundColor: "#388e3c",
-    transform: "translateY(1px)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    color: "black",
   };
 
   return (
     <div style={containerStyle}>
       <header style={headerStyle}>
-        <h1 style={titleStyle}>Enso Family Cat Tree</h1>
+        <h1 style={titleStyle}>{familyData.title}</h1>
 
         <div style={buttonsContainerStyle}>
-        <a
-  href="/doffy"
-  style={{
-    ...buttonStyle,
-    backgroundImage: "url('/Doffy.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    width: "200px", // Adjust as needed
-    height: "100px", // Adjust as needed
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "white", // Ensures text is visible
-    textDecoration: "none",
-    fontWeight: "bold",
-  }}
->
-  Doffy
-</a>
+          {familyData.members.map((member, index) => (
+            <a
+              key={index}
+              href={member.link}
+              style={{
+                ...buttonStyle,
+                backgroundImage: `url('${member.image}')`,
+                color: member.color || "black",
+              }}
+            >
+              {member.name}
+            </a>
+          ))}
+        </div>
 
+        {/* Family Tree */}
+        <div style={{ marginTop: "30px", textAlign: "center", width: "100%" }}>
+          {/* Parents */}
+          <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginBottom: "15px" }}>
+            {familyData.parents.map((parent, index) => (
+              <div
+                key={index}
+                style={{
+                  fontWeight: "bold",
+                  backgroundColor: parent.bgColor,
+                  padding: "10px",
+                  borderRadius: "6px",
+                  flex: 1,
+                  maxWidth: "180px",
+                }}
+              >
+                {parent.name}
+              </div>
+            ))}
+          </div>
 
-<a
-  href="/charlie"
-  style={{
-    ...buttonStyle,
-    backgroundImage: "url('/Charlie.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    width: "200px", // Adjust as needed
-    height: "100px", // Adjust as needed
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "black", // Ensures text is visible
-    textDecoration: "none",
-    fontWeight: "bold",
-  }}
->
-  Charlie
-</a>
-<a
-  href="/charlie"
-  style={{
-    ...buttonStyle,
-    backgroundImage: "url('/Panda.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    width: "200px", // Adjust as needed
-    height: "100px", // Adjust as needed
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "black", // Ensures text is visible
-    textDecoration: "none",
-    fontWeight: "bold",
-  }}
->
-  Panda
-</a>
+          {/* Siblings */}
+          <div style={buttonsContainerStyle}>
+            {familyData.siblings.map((sibling, index) => (
+              <a
+                key={index}
+                href={sibling.link}
+                style={{
+                  ...buttonStyle,
+                  backgroundImage: `url('${sibling.image}')`,
+                }}
+              >
+                {sibling.name}
+              </a>
+            ))}
+          </div>
         </div>
       </header>
     </div>
