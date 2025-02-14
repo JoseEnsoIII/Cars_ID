@@ -1,12 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Importing necessary components
 import { Analytics } from "@vercel/analytics/react"; // Import Analytics
 import Home from './Components/Pages/Home'; // Import Home page
-import Charlie from './Components/Pages/Meg'; // Import Meg page
-import Panda from './Components/Pages/Optimus'; // Import Optimus page
-import Doffy from './Components/Pages/Doffy'; // Import Optimus page
-import Megs from './Components/Pages/Megs'; // Import Optimus page
+import Charlie from './Components/Family_Cat/Family_Cat/Panda'; // Import Meg page
+import Panda from './Components/Family_Cat/Family_Cat/Charlie'; // Import Optimus page
+import Doffy from './Components/Family_Cat/Family_Cat/Doffy'; // Import Optimus page
 import FamilyTree from './Components/Pages/Family_Tree'; // Import Optimus page
-import Purrent from './Components/Pages/Parent'; // Import Parent page
+import Purrent from './Components/Family_Cat/Parent/Parent'; // Import Parent page
 import './App.css';
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
         <Route path="/panda" element={<Panda />} />
         <Route path="/doffy" element={<Doffy />} />
         <Route path="/family_tree" element={<FamilyTree />} />
-        <Route path="/megs" element={<Megs />} />
       </Routes>
     </Router>  
   );

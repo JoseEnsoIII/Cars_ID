@@ -167,16 +167,15 @@ const CatID = () => {
             fontWeight: "bold",
             textAlign: "center",
             color: "#333",
-            marginBottom: "10px",
           }}
         >
-          <a href="https://onepiece.fandom.com/wiki/Donquixote_Doflamingo">{cat.name}</a>'s ID <br />
-          <a href="https://onepiece.fandom.com/wiki/Donquixote_Doflamingo">{cat.fullname}</a>
+          <a href="https://onepiece.fandom.com/wiki/Donquixote_Doflamingo">{cat.name}</a>'s ID 
         </h2>
+        <p><strong>{cat.fullname}</strong></p>
         <p>
-          <strong>Born: </strong> {cat.birthday} <br />
-          <strong>Passed Away:  </strong> {cat.DeathDate}
-        </p>
+  <strong>Born: </strong> {cat.birthday} - {cat.DeathDate && `${cat.DeathDate} 🕊️`} <br />
+</p>
+
 
         <p>
   <strong>Age:</strong>{" "}

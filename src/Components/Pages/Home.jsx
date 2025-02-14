@@ -1,7 +1,10 @@
-import React from "react";
-import familyData from "../Family/Family_Data"; // Import the data
+import React, { useState } from "react";
+import familyData from "../Family_Cat/Family_Data"; // Import the data
 
 const Welcome = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [clickedIndex, setClickedIndex] = useState(null);
+
   const containerStyle = {
     minHeight: "100vh",
     display: "flex",
@@ -39,23 +42,6 @@ const Welcome = () => {
     width: "100%",
   };
 
-  const buttonStyle = {
-    width: "150px",
-    height: "80px",
-    textDecoration: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontSize: "1rem",
-    fontWeight: "600",
-    borderRadius: "8px",
-    textAlign: "center",
-    transition: "background-color 0.3s ease, transform 0.2s ease",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    color: "black",
-  };
-
   return (
     <div style={containerStyle}>
       <header style={headerStyle}>
@@ -66,18 +52,34 @@ const Welcome = () => {
             <a
               key={index}
               href={member.link}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              onMouseDown={() => setClickedIndex(index)}
+              onMouseUp={() => setClickedIndex(null)}
               style={{
-                ...buttonStyle,
-                backgroundImage: `url('${member.image}')`,
+                width: "150px",
+                height: "80px",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "1rem",
+                fontWeight: "600",
+                borderRadius: "8px",
+                textAlign: "center",
+                transition: "background-color 0.3s ease, transform 0.2s ease",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
                 color: member.color || "black",
+                backgroundImage: `url('${member.image}')`,
+                transform: clickedIndex === index ? "scale(0.95)" : hoveredIndex === index ? "scale(1.1)" : "scale(1)",
+                filter: hoveredIndex === index ? "brightness(1.2)" : "brightness(1)",
               }}
             >
               {member.name}
             </a>
           ))}
         </div>
-
-        
       </header>
     </div>
   );
