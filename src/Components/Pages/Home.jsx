@@ -13,7 +13,7 @@ const Welcome = () => {
 
   const headerStyle = {
     textAlign: "center",
-    backgroundColor: "white",
+    backgroundColor: "#fff",
     borderRadius: "12px",
     padding: "40px",
     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",

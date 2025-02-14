@@ -1,5 +1,5 @@
 const familyData = {
-    title: "Enso Family Cat Tree",
+    title: "Enso Family Cat ",
     members: [
       {
         name: "Doffy",
