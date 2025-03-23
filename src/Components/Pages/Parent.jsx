@@ -1,17 +1,12 @@
 import React, { useEffect } from "react";
 
-const CatID = () => {
+const ParentID = () => {
   const cat = {
     id: "12345ABC",
     name: "Jose Enso III",
     number: "09766686559",
     number2: "09675207614",
     gmail: "joseensothethird@gmail.com",
-    race: "Tabby",
-    color: "Orange and White",
-    eyeColor: "Green",
-    description:
-      "A playful and friendly orange tabby with distinctive white paws. Loves chasing laser pointers.",
     location: "Lingunan, Valenzuela City",
     qrLink: "https://example.com/cat-profile",
   };
@@ -83,19 +78,42 @@ const CatID = () => {
           <strong>2nd Number:</strong> {cat.number2}
         </p>
         <p>
-          <strong>Facebook: </strong>
-          <a
-            href="https://www.facebook.com/ensojosethethird"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "#007bff", textDecoration: "underline" }}
-          >
-            https://www.facebook.com/ensojosethethird
-          </a>
-        </p>
-        <p>
           <strong>Gmail:</strong> {cat.gmail}
         </p>
+      </div>
+
+      {/* Buttons Section */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "10px",
+          marginTop: "20px",
+        }}
+      >
+        <a
+          href="https://www.facebook.com/ensojosethethird"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button
+            style={{
+              backgroundColor: "#007bff",
+              color: "white",
+              padding: "10px 20px",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer",
+              transition: "background-color 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.backgroundColor = "#0056b3")}
+            onMouseOut={(e) => (e.target.style.backgroundColor = "#007bff")}
+          >
+            Visit Facebook Profile
+          </button>
+        </a>
+
         <a
           href="https://www.openstreetmap.org/way/30160365"
           target="_blank"
@@ -123,8 +141,7 @@ const CatID = () => {
         style={{
           marginTop: "20px",
           width: "100%",
-          display: "center",
-          justifyContent: "space-between",
+          textAlign: "center",
         }}
       >
         <a
@@ -142,4 +159,4 @@ const CatID = () => {
   );
 };
 
-export default CatID;
+export default ParentID;
